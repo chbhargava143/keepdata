@@ -1,7 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -11,15 +12,54 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Notes-on-Mac_thumb800" translatesAutoresizingMaskIntoConstraints="NO" id="blf-ca-v2k">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                            </imageView>
+                            <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1OJ-bT-8Ox">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" semanticContentAttribute="spatial" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Keep Notes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lys-TX-ht2">
+                                        <rect key="frame" x="32.666666666666657" y="52" width="310" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="310" id="hXU-4W-PH3"/>
+                                            <constraint firstAttribute="height" constant="100" id="nwC-yc-AZr"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="40"/>
+                                        <color key="textColor" red="0.16286282329999999" green="0.23256053569999999" blue="0.31493892769999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.20225833839999999" green="0.28881549870000001" blue="0.39112071700000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="lys-TX-ht2" firstAttribute="top" secondItem="1OJ-bT-8Ox" secondAttribute="top" constant="52" id="DvW-Cc-fCk"/>
+                                    <constraint firstItem="lys-TX-ht2" firstAttribute="centerX" secondItem="1OJ-bT-8Ox" secondAttribute="centerX" id="fhi-F5-yfp"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.16286282329999999" green="0.23256053569999999" blue="0.31493892769999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="blf-ca-v2k" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="A6T-fx-GaW"/>
+                            <constraint firstItem="1OJ-bT-8Ox" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="DVh-FT-LmW"/>
+                            <constraint firstItem="1OJ-bT-8Ox" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="In1-Xb-8QF"/>
+                            <constraint firstAttribute="bottom" secondItem="1OJ-bT-8Ox" secondAttribute="bottom" id="Vun-7i-Drm"/>
+                            <constraint firstItem="blf-ca-v2k" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="Wmv-Li-JTx"/>
+                            <constraint firstItem="1OJ-bT-8Ox" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="Ze6-mj-bMh"/>
+                            <constraint firstAttribute="bottom" secondItem="blf-ca-v2k" secondAttribute="bottom" id="baD-Fg-nBh"/>
+                            <constraint firstItem="blf-ca-v2k" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="g87-3F-gyE"/>
+                        </constraints>
                     </view>
+                    <size key="freeformSize" width="375" height="812"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52.173913043478265" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Notes-on-Mac_thumb800" width="800" height="450"/>
+    </resources>
 </document>

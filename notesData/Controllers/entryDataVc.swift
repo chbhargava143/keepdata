@@ -23,10 +23,10 @@ class entryDataVc: UIViewController ,UITextViewDelegate{
        corners()
         bcView.layer.backgroundColor = UIColor.clear.cgColor
         dimissView.backgroundColor = UIColor.black.withAlphaComponent(0.4)
-        if UIScreen.main.bounds.height < 600 {
-            height_View.constant = 250
+        if UIScreen.main.bounds.height < 820 {
+            height_View.constant = 300
         }
-        else if UIScreen.main.bounds.height > 700{
+        else if UIScreen.main.bounds.height > 820{
             height_View.constant = 450
         }
        else if UIDevice.current.orientation.isLandscape{

@@ -61,8 +61,10 @@ extension ViewController:UITableViewDelegate,UITableViewDataSource{
         
         let formatter = DateFormatter()
         formatter.timeZone = .current
+        formatter.timeStyle = .medium
         formatter.locale = .current
-        formatter.dateFormat = "E,d MM yyyy,HH:mm:ss a"
+        
+        formatter.dateFormat = "E,d MM yyyy, hh:mm:ss a"
       
        
         if let dates = items.createdate{

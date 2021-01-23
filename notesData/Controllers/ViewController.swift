@@ -12,9 +12,11 @@ class ViewController: UIViewController ,reloadTbl{
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var models = [Notedata]()
+    let textData:String = "On"
     @IBOutlet weak var tbl_View : UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        //self.navigationController?.navigationBar.isHidden = false
         addNibFile()
        delegates()
         getAllItems()
@@ -68,9 +70,10 @@ extension ViewController:UITableViewDelegate,UITableViewDataSource{
       
        
         if let dates = items.createdate{
-           
+            
+        
             let dateString = formatter.string(from: dates)
-            cell.dateLabel.text = dateString
+            cell.dateLabel.text = "On -> " + dateString
             //print(dateString)
         }
       
@@ -79,19 +82,10 @@ extension ViewController:UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 60
     }
-    // Set the spacing between sections
-//    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-//        return 10
-//    }
-    
-    // Make the background color show through
-//    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-//        let headerView = UIView()
-//        headerView.backgroundColor = UIColor.clear
-//
-//        return headerView
-//    }
-//
+
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = true  //Hide
+    }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let items = models[indexPath.row]
         let alert = UIAlertController.init(title: "Edit", message: nil, preferredStyle: .actionSheet)

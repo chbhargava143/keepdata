@@ -15,6 +15,7 @@ class launcScreen: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.isHidden = true
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         titleLbl.textColor = .white
         titleLbl.font = .boldSystemFont(ofSize: 30)
         titleLbl.text = ""
@@ -37,17 +38,17 @@ class launcScreen: UIViewController {
 //            navRoot.navigationBar.titleTextAttributes = [
 //                NSAttributedString.Key.foregroundColor: UIColor.white
 //            ]
-            self.present(navRoot, animated: true, completion: nil)
+            //self.present(navRoot, animated: true, completion: nil)
 //            UIApplication.shared.windows.first?.rootViewController = HomeVc
 //            UIApplication.shared.windows.first?.makeKeyAndVisible()
-//            self.present(HomeVc, animated: true) {
-//                UIView.animate(withDuration: 1.0, delay: 0.5, options: .autoreverse) {
-//                    self.view.alpha = 0
-//                } completion: { (_) in
-//
-//                }
-//
-//            }
+            self.present(navRoot, animated: true) {
+                UIView.animate(withDuration: 1.0, delay: 0.5, options: .autoreverse) {
+                    self.view.alpha = 0
+                } completion: { (_) in
+
+                }
+
+            }
             //self.navigationController?.pushViewController(HomeVc, animated: true)
             //self.present(HomeVc, animated: true, completion: <#T##(() -> Void)?##(() -> Void)?##() -> Void#>)
         }

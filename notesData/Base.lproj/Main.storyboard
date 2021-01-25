@@ -177,7 +177,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lHD-x6-0hO" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5509" y="-46"/>
+            <point key="canvasLocation" x="5311" y="-22"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="9Zt-RH-ZuW">
@@ -189,7 +189,8 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.094117647058823528" green="0.15294117647058825" blue="0.20392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
-                            <color key="textColor" red="0.23009034759999999" green="1" blue="0.98555371140000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="textShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
                         <textAttributes key="largeTitleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -197,9 +198,6 @@
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
-                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="X2U-4v-NgV">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </toolbar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="EaF-vL-2DK"/>
                     </connections>
@@ -290,7 +288,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c4t-JL-mi1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4497.8971962616815" y="-7.4514038876889854"/>
+            <point key="canvasLocation" x="4402" y="20"/>
         </scene>
         <!--Launc Screen-->
         <scene sceneID="CmT-EQ-3JC">

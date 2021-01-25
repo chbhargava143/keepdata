@@ -18,13 +18,16 @@ class ViewController: UIViewController ,reloadTbl{
     override func viewDidLoad() {
         super.viewDidLoad()
         // edited
-        //self.navigationItem.backBarButtonItem?.isEnabled = false
+        
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController?.navigationBar.shadowImage = UIImage()
         addNibFile()
        delegates()
         getAllItems()
        
         // Do any additional setup after loading the view.
     }
+    
     // MARK: - Tableview datasource and delegates.
     func delegates(){
         tbl_View.delegate = self

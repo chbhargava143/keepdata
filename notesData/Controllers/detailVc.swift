@@ -8,7 +8,7 @@
 import UIKit
 import CoreData
 class detailVc: UIViewController {
-    let results : ResultDeclare? = nil
+    let results = ResultDeclare.onSuccess
     var getData = Notedata()
     @IBOutlet weak var dateLabel : UILabel!
     @IBOutlet weak var dataLabel : UILabel!

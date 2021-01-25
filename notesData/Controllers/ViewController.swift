@@ -17,7 +17,7 @@ class ViewController: UIViewController ,reloadTbl{
     @IBOutlet weak var tbl_View : UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        // edited
         //self.navigationItem.backBarButtonItem?.isEnabled = false
         addNibFile()
        delegates()

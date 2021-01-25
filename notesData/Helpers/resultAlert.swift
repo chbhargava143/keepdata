@@ -7,10 +7,13 @@
 
 import UIKit
 extension UIViewController{
-    func checkDetails(){
-        let alert = UIAlertController.init(title: "Error", message: "Check the Detailss", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Cancel", style: .destructive, handler: nil))
-        present(alert, animated: true, completion: nil)
+    func checkDetails(alertTitle : String,message : String , actionTitle : String){
+        let alerts = UIAlertController.init(title: alertTitle  , message: message, preferredStyle: .alert)
+        alerts.addAction(UIAlertAction(title: actionTitle, style: .destructive, handler: nil))
+        present(alerts, animated: true, completion: nil)
+    }
+    func checkingDetails(){
+        
     }
 }
 

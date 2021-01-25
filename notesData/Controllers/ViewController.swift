@@ -7,16 +7,13 @@
 
 import UIKit
 import CoreData
-enum ResultDeclare:String {
-    case onSuccess
-    case onFailure
-}
+
 class ViewController: UIViewController ,reloadTbl{
    
     let currentResult = ResultDeclare.onSuccess
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var models = [Notedata]()
-    let textData:String = "On"
+ 
     @IBOutlet weak var tbl_View : UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -141,16 +138,16 @@ extension ViewController {
                     self.tbl_View.reloadData()
                 }
             }catch{
-                checkDetails()
+                checkDetails(alertTitle: "Error", message: "Check details", actionTitle: "Ok")
                 print("getitems Catch Error")
             }
             break
         case .onFailure :
-            checkDetails()
+            checkDetails(alertTitle: "Error", message: "Check details", actionTitle: "Ok")
             print("getitems onFilure")
             break
         default:
-            checkDetails()
+            checkDetails(alertTitle: "Error", message: "Check details", actionTitle: "Ok")
             
             print("getitems Default Error")
             break
@@ -167,16 +164,16 @@ extension ViewController {
                 try context.save()
             }
             catch{
-                checkDetails()
+                checkDetails(alertTitle: "Error", message: "Check details", actionTitle: "Ok")
                 print("update Error")
             }
             break
         case .onFailure :
-            checkDetails()
+            checkDetails(alertTitle: "Error", message: "Check details", actionTitle: "Ok")
             print("update onFilure")
             break
         default:
-            checkDetails()
+            checkDetails(alertTitle: "Error", message: "Check details", actionTitle: "Ok")
             
             print("update Default Error")
             break
@@ -193,16 +190,16 @@ extension ViewController {
                 try context.save()
             }
             catch{
-                checkDetails()
+                checkDetails(alertTitle: "Error", message: "Check details", actionTitle: "Ok")
                 print("delete error")
             }
             break
         case .onFailure :
-            checkDetails()
+            checkDetails(alertTitle: "Error", message: "Check details", actionTitle: "Ok")
             print("delete onFilure")
             break
         default:
-            checkDetails()
+            checkDetails(alertTitle: "Error", message: "Check details", actionTitle: "Ok")
             
             print("delete Default Error")
             break

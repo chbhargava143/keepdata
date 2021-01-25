@@ -8,7 +8,7 @@
 import UIKit
 import CoreData
 class detailVc: UIViewController {
-    let results = ResultDeclare.onSuccess
+    let results : ResultDeclare? = nil
     var getData = Notedata()
     @IBOutlet weak var dateLabel : UILabel!
     @IBOutlet weak var dataLabel : UILabel!
@@ -27,11 +27,11 @@ class detailVc: UIViewController {
             }
             break
         case .onFailure:
-            checkDetails()
+            checkDetails(alertTitle: "Error", message: "Check details", actionTitle: "Ok")
             print("ShowDetails failure Error")
             break
         default:
-            checkDetails()
+            checkDetails(alertTitle: "Error", message: "Check details", actionTitle: "Ok")
             print("ShowDetails default Error")
             break
         }

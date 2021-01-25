@@ -46,6 +46,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="didTouchNextVc" destination="NlN-DT-yQJ" id="E7c-zO-hX1"/>
                         <outlet property="tbl_View" destination="aRe-an-1oc" id="9Jc-0R-MCT"/>
                     </connections>
                 </viewController>

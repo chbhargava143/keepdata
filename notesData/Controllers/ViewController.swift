@@ -13,12 +13,13 @@ class ViewController: UIViewController ,reloadTbl{
     let currentResult = ResultDeclare.onSuccess
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var models = [Notedata]()
- 
+    @IBOutlet weak var didTouchNextVc : UIBarButtonItem!
     @IBOutlet weak var tbl_View : UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         // edited
-        
+        didTouchNextVc.tintColor = .white
+        UINavigationBar.appearance().largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()
         addNibFile()

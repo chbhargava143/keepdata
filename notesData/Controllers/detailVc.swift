@@ -15,7 +15,7 @@ class detailVc: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.tintColor = UIColor.white
-      
+        self.navigationItem.largeTitleDisplayMode = .never
         let formatter = DateFormatter()
         formatter.timeZone = .current
         formatter.locale = .current
@@ -39,10 +39,7 @@ class detailVc: UIViewController {
         }
         
     }
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        navigationController?.navigationBar.prefersLargeTitles = false
-      }
+   
 
 
 }

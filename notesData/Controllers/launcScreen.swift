@@ -14,6 +14,7 @@ class launcScreen: UIViewController {
     let duration = 5
     override func viewDidLoad() {
         super.viewDidLoad()
+        //self.navigationController?.navigationBar.isHidden = true
         titleLbl.textColor = .white
         titleLbl.font = .boldSystemFont(ofSize: 30)
         titleLbl.text = ""
@@ -29,14 +30,16 @@ class launcScreen: UIViewController {
             let HomeVc = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(identifier: "ViewController" ) as! ViewController
             HomeVc.modalPresentationStyle = .fullScreen
             HomeVc.modalTransitionStyle = .crossDissolve
-            self.present(HomeVc, animated: true) {
-                UIView.animate(withDuration: 1.0, delay: 0.5, options: .autoreverse) {
-                    self.view.alpha = 0
-                } completion: { (_) in
-
-                }
-
-            }
+            self.present(HomeVc, animated: true, completion: nil)
+//            self.present(HomeVc, animated: true) {
+//                UIView.animate(withDuration: 1.0, delay: 0.5, options: .autoreverse) {
+//                    self.view.alpha = 0
+//                } completion: { (_) in
+//
+//                }
+//
+//            }
+            //self.navigationController?.pushViewController(HomeVc, animated: true)
             //self.present(HomeVc, animated: true, completion: <#T##(() -> Void)?##(() -> Void)?##() -> Void#>)
         }
     

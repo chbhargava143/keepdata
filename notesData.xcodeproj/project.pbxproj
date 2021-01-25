@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C5AF55125BE8FFD00869953 /* resultAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5AF55025BE8FFD00869953 /* resultAlert.swift */; };
 		4C74FC4E25B1D8310061532E /* KeyboardHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C74FC4D25B1D8310061532E /* KeyboardHelpers.swift */; };
 		4CBA90FA25BC1FC200904F7E /* launcScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBA90F925BC1FC100904F7E /* launcScreen.swift */; };
 		4CDA12EA25B16A0F002F0F02 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDA12E925B16A0F002F0F02 /* AppDelegate.swift */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4C5AF55025BE8FFD00869953 /* resultAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = resultAlert.swift; sourceTree = "<group>"; };
 		4C74FC4D25B1D8310061532E /* KeyboardHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardHelpers.swift; sourceTree = "<group>"; };
 		4CBA90F925BC1FC100904F7E /* launcScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = launcScreen.swift; sourceTree = "<group>"; };
 		4CDA12E625B16A0F002F0F02 /* notesData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = notesData.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -62,6 +64,7 @@
 			isa = PBXGroup;
 			children = (
 				4C74FC4D25B1D8310061532E /* KeyboardHelpers.swift */,
+				4C5AF55025BE8FFD00869953 /* resultAlert.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -211,6 +214,7 @@
 			files = (
 				4CBA90FA25BC1FC200904F7E /* launcScreen.swift in Sources */,
 				4C74FC4E25B1D8310061532E /* KeyboardHelpers.swift in Sources */,
+				4C5AF55125BE8FFD00869953 /* resultAlert.swift in Sources */,
 				4CDA130625B16A92002F0F02 /* Notedata+CoreDataClass.swift in Sources */,
 				4CDA130A25B16B33002F0F02 /* entryDataVc.swift in Sources */,
 				4CDA12EE25B16A0F002F0F02 /* ViewController.swift in Sources */,

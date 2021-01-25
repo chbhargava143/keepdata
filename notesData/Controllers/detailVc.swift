@@ -6,8 +6,9 @@
 //
 
 import UIKit
-
+import CoreData
 class detailVc: UIViewController {
+    let results = ResultDeclare.onSuccess
     var getData = Notedata()
     @IBOutlet weak var dateLabel : UILabel!
     @IBOutlet weak var dataLabel : UILabel!
@@ -17,23 +18,26 @@ class detailVc: UIViewController {
         formatter.timeZone = .current
         formatter.locale = .current
         formatter.dateFormat = "E,d MM yyyy,HH:mm:ss a"
-        dataLabel.text = getData.createdata
-        if let date = getData.createdate {
-            let dateString = formatter.string(from: date)
-            dateLabel.text = dateString
+        switch results {
+        case .onSuccess:
+            dataLabel.text = getData.createdata
+            if let date = getData.createdate {
+                let dateString = formatter.string(from: date)
+                dateLabel.text = dateString
+            }
+            break
+        case .onFailure:
+            checkDetails()
+            print("ShowDetails failure Error")
+            break
+        default:
+            checkDetails()
+            print("ShowDetails default Error")
+            break
         }
-        // Do any additional setup after loading the view.
+        
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

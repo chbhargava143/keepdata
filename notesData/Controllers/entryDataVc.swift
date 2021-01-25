@@ -37,7 +37,7 @@ class entryDataVc: UIViewController ,UITextViewDelegate{
         self.hideKeyboardWhenTappedAround()
      
         dataTextView.delegate = self
-                // Do any additional setup after loading the view.
+                
     }
     // MARK: - Make Two side round corners to TextView.
     func corners(){
@@ -47,7 +47,7 @@ class entryDataVc: UIViewController ,UITextViewDelegate{
         dataTextView.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
             
     }
-    // MARK: - Hide keyboard when we tapped on return key in keyboard.
+    // MARK: - Hide keyboard when we tapped on return key in keyboard in textView.
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
         if text == "\n"{
             dataTextView.resignFirstResponder()

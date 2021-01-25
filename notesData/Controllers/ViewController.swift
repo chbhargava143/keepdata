@@ -7,16 +7,21 @@
 
 import UIKit
 import CoreData
+enum ResultDeclare:String {
+    case onSuccess
+    case onFailure
+}
 class ViewController: UIViewController ,reloadTbl{
    
-    
+    let currentResult = ResultDeclare.onSuccess
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var models = [Notedata]()
     let textData:String = "On"
     @IBOutlet weak var tbl_View : UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        //self.navigationController?.navigationBar.isHidden = false
+        
+        //self.navigationItem.backBarButtonItem?.isEnabled = false
         addNibFile()
        delegates()
         getAllItems()
@@ -83,9 +88,7 @@ extension ViewController:UITableViewDelegate,UITableViewDataSource{
         return 60
     }
 
-    override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.isNavigationBarHidden = true  //Hide
-    }
+  
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let items = models[indexPath.row]
         let alert = UIAlertController.init(title: "Edit", message: nil, preferredStyle: .actionSheet)
@@ -126,38 +129,85 @@ extension ViewController:UITableViewDelegate,UITableViewDataSource{
 
 
 extension ViewController {
+    
     // MARK: - Get all items from Coredata.
     func getAllItems(){
-        do{
-            self.models = try context.fetch(Notedata.fetchRequest())
-            DispatchQueue.main.async {
-                self.tbl_View.reloadData()
+   
+        switch currentResult{
+        case .onSuccess:
+            do{
+                self.models = try context.fetch(Notedata.fetchRequest())
+                DispatchQueue.main.async {
+                    self.tbl_View.reloadData()
+                }
+            }catch{
+                checkDetails()
+                print("getitems Catch Error")
             }
-        }catch{
+            break
+        case .onFailure :
+            checkDetails()
+            print("getitems onFilure")
+            break
+        default:
+            checkDetails()
             
+            print("getitems Default Error")
+            break
         }
+       
     }
+   
     // MARK: - Update selected item in Taleview.
     func updateData(item:Notedata,newName:String){
-        
-        item.createdata = newName
-        do{
-            try context.save()
+        switch currentResult{
+        case .onSuccess:
+            item.createdata = newName
+            do{
+                try context.save()
+            }
+            catch{
+                checkDetails()
+                print("update Error")
+            }
+            break
+        case .onFailure :
+            checkDetails()
+            print("update onFilure")
+            break
+        default:
+            checkDetails()
+            
+            print("update Default Error")
+            break
         }
-        catch{
-            print("error")
-        }
+       
 
     }
     // MARK: - Delete selected item in Tableview.
     func deletetData(item:Notedata){
-        context.delete(item)
-        do{
-            try context.save()
+        switch currentResult{
+        case .onSuccess:
+            context.delete(item)
+            do{
+                try context.save()
+            }
+            catch{
+                checkDetails()
+                print("delete error")
+            }
+            break
+        case .onFailure :
+            checkDetails()
+            print("delete onFilure")
+            break
+        default:
+            checkDetails()
+            
+            print("delete Default Error")
+            break
         }
-        catch{
-            print("error")
-        }
+     
 
     }
 }
